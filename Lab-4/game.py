@@ -11,7 +11,16 @@ MOVE_DELAY, ENEMY_DELAY, PUMP_RANGE, DEFLATE_AFTER = 0.11, 0.35, 3, 1.5
 
 def dirt_color(row):
     """Return an (r, g, b) colour for dirt in the given row, or None for the default gradient."""
-    pass
+    bands = [
+        (1, 3, (196, 164, 110)),   # topsoil
+        (4, 6, (170, 105, 55)),    # clay
+        (7, 9, (140, 70, 50)),     # reddish rock
+        (10, 13, (90, 45, 55)),    # deep maroon
+    ]
+    for lo, hi, color in bands:
+        if lo <= row <= hi:
+            return color
+    return None
 
 
 def on_enemy_popped(enemy, score):
