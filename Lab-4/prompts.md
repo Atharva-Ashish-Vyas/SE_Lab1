@@ -1,6 +1,6 @@
 # Prompts used (Lab 4: Dig Dug Repair Lab)
 
-Chat history link: PASTE SHARED CHAT LINK HERE
+Chat history link: https://claude.ai/share/556b8b58-fb6a-4fe7-a5d7-5f62e1391496
 
 ## Task prompts
 

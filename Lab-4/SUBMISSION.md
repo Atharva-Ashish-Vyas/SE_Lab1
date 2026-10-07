@@ -2,11 +2,11 @@
 
 | Item | Link |
 |---|---|
-| Updated lab repository | PASTE YOUR REPO LINK HERE |
-| Before video (10 s) | PASTE BEFORE VIDEO LINK HERE |
-| After video (10 s) | PASTE AFTER VIDEO LINK HERE |
+| Updated lab repository | https://github.com/Atharva-Ashish-Vyas/SE_Lab1/tree/main/Lab-4 |
+| Before video (10 s) | https://drive.google.com/drive/folders/1DDUZGvbO1P-pkQSaY3SXo4CIIksBRK-L?usp=sharing (before.mp4) |
+| After video (10 s) | https://drive.google.com/drive/folders/1DDUZGvbO1P-pkQSaY3SXo4CIIksBRK-L?usp=sharing (after.mp4) |
 | Prompts used | [prompts.md](prompts.md) (also in Lab4_Report.pdf, section 8) |
-| Chat history | PASTE SHARED CHAT LINK HERE |
+| Chat history | https://claude.ai/share/556b8b58-fb6a-4fe7-a5d7-5f62e1391496 |
 | PDF report | [Lab4_Report.pdf](Lab4_Report.pdf) |
 
 ## Contents of this folder
