@@ -9,6 +9,9 @@ DIRS = {pygame.K_UP: (-1, 0), pygame.K_DOWN: (1, 0), pygame.K_LEFT: (0, -1), pyg
 MOVE_DELAY, ENEMY_DELAY, PUMP_RANGE, DEFLATE_AFTER = 0.11, 0.35, 3, 1.5
 
 
+PARTICLES = []
+
+
 def dirt_color(row):
     """Return an (r, g, b) colour for dirt in the given row, or None for the default gradient."""
     bands = [
@@ -25,7 +28,11 @@ def dirt_color(row):
 
 def on_enemy_popped(enemy, score):
     """Called when an enemy is popped; add particles, bonus points, or a colour flash here."""
-    pass
+    cx = enemy.cell[1] * TILE + TILE // 2
+    cy = enemy.cell[0] * TILE + TILE // 2
+    for _ in range(18):
+        vel = pygame.math.Vector2(random.uniform(40, 160), 0).rotate(random.uniform(0, 360))
+        PARTICLES.append({"x": cx, "y": cy, "vx": vel.x, "vy": vel.y, "life": random.uniform(0.3, 0.7)})
 
 
 def enemy_speed_multiplier(level):
@@ -78,6 +85,7 @@ class Game:
 
     def reset(self):
         self.level, self.score, self.lives, self.state = 1, 0, 3, "play"
+        PARTICLES.clear()
         self.start_level()
 
     def start_level(self):
@@ -181,6 +189,12 @@ class Game:
                 break
         if self.pump_target and (self.pump_target not in self.enemies or not self.pump_target.locked):
             self.pump_target = None
+        for p in PARTICLES[:]:
+            p["x"] += p["vx"] * dt
+            p["y"] += p["vy"] * dt
+            p["life"] -= dt
+            if p["life"] <= 0:
+                PARTICLES.remove(p)
 
     def draw(self, screen):
         screen.fill((30, 30, 60))
@@ -207,6 +221,8 @@ class Game:
         if self.pump_target:
             tx, ty = self.pump_target.cell[1] * TILE + TILE // 2, self.pump_target.cell[0] * TILE + TILE // 2
             pygame.draw.line(screen, (255, 255, 120), (px, py), (tx, ty), 3)
+        for p in PARTICLES:
+            pygame.draw.circle(screen, (255, 220, 90), (int(p["x"]), int(p["y"])), 3)
         hud = self.font.render(f"Score {self.score}  Lives {self.lives}  Level {self.level}  R = reset", True, (240, 240, 240))
         screen.blit(hud, (10, ROWS * TILE + 8))
         if self.state == "lose":
