@@ -39,7 +39,7 @@ def advance_status(tracking_id):
 
 def shipping_cost(weight_kg):
     """Charge 50 for the first kilogram and 30 for each extra kilogram."""
-    cost=50
+    cost = 50
     if weight_kg > 1:
         cost += (weight_kg - 1) * 30
     return round(cost, 2)
@@ -96,11 +96,12 @@ def main():
         print(track_parcel(tracking_id))
         print("  with courier:", is_with_courier(tracking_id))
         print("  cost:", shipping_cost(PARCELS[tracking_id]["weight"]))
-    print(track_parcel("TRK00000")) # Unknown ID
+    print(track_parcel("TRK00000"))  # Unknown ID
     delivery_otp = 1000 + secrets.randbelow(9000)
     print("Delivery OTP for", third, "is", delivery_otp)
-    print("Parcels booked today:",len(PARCELS))
+    print("Parcels booked today:", len(PARCELS))
 
 
-main()
+if __name__ == "__main__":
+    main()
 

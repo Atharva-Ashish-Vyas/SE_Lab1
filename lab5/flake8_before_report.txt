@@ -1,0 +1,4 @@
+work/stage_pylint.py:42:9: E225 missing whitespace around operator
+work/stage_pylint.py:99:36: E261 at least two spaces before inline comment
+work/stage_pylint.py:102:34: E231 missing whitespace after ','
+
