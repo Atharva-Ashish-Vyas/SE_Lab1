@@ -1,0 +1,10 @@
+$ python -m coverage run --source=customs_duty -m pytest -q CodeCoverageTest_customs_duty_application.py
+................                                                         [100%]
+16 passed in 0.08s
+
+$ python -m coverage report -m
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+customs_duty.py      36      0   100%
+-----------------------------------------------
+TOTAL                36      0   100%

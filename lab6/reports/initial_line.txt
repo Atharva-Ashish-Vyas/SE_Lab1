@@ -1,0 +1,10 @@
+$ python -m coverage run --source=customs_duty -m pytest -q test_customs_duty.py
+..                                                                       [100%]
+2 passed in 0.05s
+
+$ python -m coverage report -m
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+customs_duty.py      36     23    36%   6, 8-10, 12-14, 17, 22, 24-26, 29-32, 36-42
+-----------------------------------------------
+TOTAL                36     23    36%
