@@ -1,0 +1,70 @@
+{
+  "initial_line": {
+    "covered_lines": 13,
+    "num_statements": 36,
+    "percent_covered": 36.111111111111114,
+    "percent_covered_display": "36",
+    "missing_lines": 23,
+    "excluded_lines": 0,
+    "percent_statements_covered": 36.111111111111114,
+    "percent_statements_covered_display": "36"
+  },
+  "initial_branch": {
+    "covered_lines": 13,
+    "num_statements": 36,
+    "percent_covered": 31.25,
+    "percent_covered_display": "31",
+    "missing_lines": 23,
+    "excluded_lines": 0,
+    "percent_statements_covered": 36.111111111111114,
+    "percent_statements_covered_display": "36",
+    "num_branches": 28,
+    "num_partial_branches": 7,
+    "covered_branches": 7,
+    "missing_branches": 21,
+    "percent_branches_covered": 25.0,
+    "percent_branches_covered_display": "25"
+  },
+  "line": {
+    "covered_lines": 36,
+    "num_statements": 36,
+    "percent_covered": 100.0,
+    "percent_covered_display": "100",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100"
+  },
+  "line_branch_diagnostic": {
+    "covered_lines": 36,
+    "num_statements": 36,
+    "percent_covered": 98.4375,
+    "percent_covered_display": "98",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 28,
+    "num_partial_branches": 1,
+    "covered_branches": 27,
+    "missing_branches": 1,
+    "percent_branches_covered": 96.42857142857143,
+    "percent_branches_covered_display": "96"
+  },
+  "branch": {
+    "covered_lines": 36,
+    "num_statements": 36,
+    "percent_covered": 100.0,
+    "percent_covered_display": "100",
+    "missing_lines": 0,
+    "excluded_lines": 0,
+    "percent_statements_covered": 100.0,
+    "percent_statements_covered_display": "100",
+    "num_branches": 28,
+    "num_partial_branches": 0,
+    "covered_branches": 28,
+    "missing_branches": 0,
+    "percent_branches_covered": 100.0,
+    "percent_branches_covered_display": "100"
+  }
+}
