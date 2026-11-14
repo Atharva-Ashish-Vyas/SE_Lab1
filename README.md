@@ -1,51 +1,71 @@
-# Lab 1 — Requirements Engineering & UML Use-Case Modelling
+# Software Engineering Lab Portfolio
 
+**Student:** Atharva Ashish Vyas  
+**SRN:** PES1UG24CS093  
 **Course:** Software Engineering
-**Problem Statement #11 — Healthcare & Telemedicine**
-**Project:** Telemedicine Slot Booking & Prescription Portal
 
-## Overview
+This repository contains my Software Engineering laboratory submissions. Each lab is kept in its own folder with the code, reports, test evidence, and documentation required for that exercise.
 
-A secure healthcare consultation portal that lets remote patients view doctor specialties, book video consultation slots, receive encrypted tele-consultation room links, and download digitally signed prescriptions.
+## Labs
 
-**Actors:** Patient, Attending Physician, Payment Gateway (external system)
-
-## Repository Contents
-
-| File | Description |
-|---|---|
-| [`Lab1_PES1UG24CS093_B.pdf`](./Lab1_Combined.pdf) | All three deliverables in one file — Requirements Table (p.1), UML Use-Case Diagram (p.2), Use-Case Flow Specification (p.3) |
-
-## Deliverable Details
-
-**Requirements Table**
-5 Functional Requirements (FR-001–FR-005) and 2 Non-Functional Requirements (NFR-001–NFR-002), each with priority, measurable acceptance criteria, and rationale.
-
-**UML Use-Case Diagram**
-3 actors (Patient, Attending Physician, Payment Gateway) and 9 use cases, with:
-- `<<include>>` — Book Consultation Slot → Process Payment
-- `<<include>>` — Author & Sign Prescription → Validate Physician License
-- `<<extend>>` — Cancel / Reschedule Slot → Book Consultation Slot
-- `<<extend>>` — Download Prescription PDF → Author & Sign Prescription
-
-**Use-Case Flow Specification**
-One-page flow for **UC-03: Book Video Consultation Slot** — preconditions, postconditions, a 10-step main success scenario, and an alternate flow for a declined payment.
-
-## Use-Case Summary
-
-| ID | Use Case | Actor(s) |
+| Lab | Topic | Main deliverables |
 |---|---|---|
-| UC-01 | Register / Login | Patient, Physician |
-| UC-02 | View Doctor Specialties | Patient |
-| UC-03 | Book Consultation Slot | Patient |
-| UC-04 | Process Payment | Payment Gateway |
-| UC-05 | Cancel / Reschedule Slot | Patient |
-| UC-06 | Join Video Consultation | Patient, Physician |
-| UC-07 | Author & Sign Prescription | Physician |
-| UC-08 | Validate Physician License | — |
-| UC-09 | Download Prescription PDF | Patient |
+| [Lab 1](./Lab1_PES1UG24CS093_B.pdf) | Requirements Engineering and UML Use-Case Modelling | Requirements table, UML use-case diagram, and use-case specification for a telemedicine portal |
+| [Lab 3](./Lab3) | Software Architecture | Component diagram and design justification |
+| [Lab 4](./Lab-4) | Prompt Engineering and Game Development | Source code, report, prompt record, evidence, and video material |
+| [Lab 5](./lab5) | Static Code Analysis | Cleaned parcel tracker, Pylint, Bandit, and Flake8 reports, issue analysis, and reflection |
+| [Lab 6](./lab6) | Code and Branch Coverage | Customs-duty tests, coverage reports, and final coverage evidence |
+| [Lab 7](./lab7) | Fuzz Testing | Fuzz-testing report, processor implementation, and automated tests |
+
+## Repository structure
+
+```text
+SE_Lab1/
+├── Lab1_PES1UG24CS093_B.pdf
+├── Lab3/
+├── Lab-4/
+├── lab5/
+├── lab6/
+└── lab7/
+```
+
+## Highlights
+
+### Lab 5 - Static Code Analysis
+
+The parcel-tracker application was improved using Pylint, Bandit, and Flake8. The final version achieves:
+
+- Pylint score: **10.00/10**
+- Flake8: **no findings**
+- Bandit: **no active findings**
+
+The work is documented in [lab5](./lab5), including before-and-after reports, issue fixes, and reflection answers.
+
+### Lab 6 - Code and Branch Coverage
+
+The customs-duty calculator is tested using separate suites for code coverage and branch coverage:
+
+- Statement coverage: **100% (36/36 statements)**
+- Branch coverage: **100% (28/28 branches)**
+- Code coverage suite: **16 passing tests**
+- Branch coverage suite: **39 passing tests**
+
+Commands, reports, screenshots, and test design notes are available in [lab6](./lab6).
+
+## Running Python-based labs
+
+Labs that include Python code can generally be run from their own folder.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+Refer to the README or submission documentation inside the relevant lab folder for exact commands and dependencies.
 
 ## Notes
 
-- FR-001 and NFR-001 were provided in the lab handout; all other requirements were authored for this submission.
-- The core use case documented in detail is **UC-03: Book Video Consultation Slot**, since it is the central transaction the rest of the system depends on.
+- Each lab is an independent academic exercise.
+- Reports and screenshots are included as evidence for the applicable lab requirements.
+- Source repositories assigned for individual exercises are referenced within the corresponding lab documentation.
